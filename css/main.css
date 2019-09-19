@@ -37,7 +37,7 @@ p {
     outline: none;
 }
 
-button {
+button /* #reset */{ 
     display: block;
     margin: 30px auto;
     text-transform: uppercase;
@@ -49,11 +49,11 @@ button {
     color: white;
 }
 
-button:hover {
+button:hover /* #reset:hover */ {
     background-color: black;
 }
 
-button:focus {
+button:focus /* #reset:focus */ {
     outline: none;
 }
 

@@ -46,18 +46,50 @@ function calculateTip() {
 
     var tipPerPerson = (billAmount * serviceQuality) / people;
 
+    var totalPerPerson = amount / people + tipPerPerson
+
     tipPerPerson = tipPerPerson.toFixed(2); // Round the tip per person to 2 decimal points
 
-    console.log(tipPerPerson);
-    
+    totalPerPerson.toFixed(2);
+
     // Display that ionformation to the user
 
     document.getElementById("tipAmount").style.display = "block"; // Display the hidden tipAmount div when we're ready to show the calculated tip
     document.getElementById("tip").innerText = tipPerPerson;
+    document.getElementById("total").innerText = totalPerPerson;
 }
+
+function reset() {
+    document.getElementById("billAmt").value = "";
+    document.getElementById("serviceQual").value = "0";
+    document.getElementById("numPeople").value = "";
+    document.getElementById("tipAmount").styledisplay = "none";
+}
+
+
+// function reset() {
+//     var billAmount = document.getElementById("billAmt").value;
+//     console.log(billAmount);
+
+//     var serviceQuality = document.getElementById("serviceQual").value
+//     console.log(serviceQuality);
+
+//     var numberOfPeople = document.getElementById("numPeople").value
+//     console.log(numberOfPeople);
+
+// }
+
+
+// document.getElementById("reset").onclick = function () {
+//     document.getElementById("tipAmount").style.display = "none";
+// }
 
 // Function that is executed when the button is clicked
 // We are passing an anonymous function (a function without a name to the button's onclick handler when it's clicked)
 document.getElementById("calculateTip").onclick = function () {
     calculateTip();
+}
+
+document.getElementById("reset").onclick = function() {
+    reset();
 }

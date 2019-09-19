@@ -12,6 +12,11 @@
 
 <body>
 
+    <!-- Tip Calculator Challenges: 
+1) Add a reset button that resets all the input fields and makes it so the tip isn't displayed any more.
+2) Right now our tip calculator just displays the tip amount for each person. In addition to that, make it so that the total price per meal for each person is displayed as well. (Total they have to pay of the original bill + tip)
+-->
+
     <!-- Container for the tip calculator -->
     <div id="container">
         <h1>TIP CALCULATOR</h1>
@@ -41,13 +46,17 @@
 
                 <!-- Button to calculate the tip -->
                 <button type="button" id="calculateTip">Calculate!</button>
+                <!-- Button to reset the tip calculator -->
+                <button type="button" id="reset">Reset</button>
+                <!-- <button type="reset" id="reset">Reset!</button> -->
             </form>
         </div>
 
         <!-- Container to hold the tip information -->
-        <div id="tipAmount">
+        <div id="tipAmount" style="display: none">
             <sup>$</sup><span id="tip">0.00</span>
             <small>each</small>
+            <sup>$</sup><span id="total">0.00</span>
         </div>
     </div>
 
